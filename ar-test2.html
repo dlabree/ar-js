@@ -1,0 +1,51 @@
+<html>
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+  <body style='margin : 0px; overflow: hidden;'>
+    <!--a-scene stats embedded arjs='trackingMethod: best;'>
+      <a-assets embedded artoolkit="sourceType: webcam;">
+            <a-asset-item id="smiley" id="smiley" src="https://raw.githubusercontent.com/Achilles2182/achilles2182.github.io/master/snowman.gltf"></a-asset-item>
+      </a-assets>
+      <a-marker preset="hiro">
+  <a-entity gltf-model="#smiley" position="0 1 -1" rotation="90 180 360" scale="0.2 0.2 0.2">
+    <a-animation attribute="rotation"
+         dur="5000"
+         fill="forwards"
+         from="0 0 0"
+         to="0 0 360"
+         repeat="indefinite"></a-animation>
+  </a-entity>
+      </a-marker>
+
+      <a-entity camera>
+      </a-entity>
+    </a-scene-->
+
+<a-scene arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+      <a-assets embedded artoolkit="sourceType: webcam;">
+            <a-asset-item id="smiley" id="smiley" src="https://raw.githubusercontent.com/Achilles2182/achilles2182.github.io/master/snowman.gltf"></a-asset-item>
+      </a-assets>
+<a-marker type='barcode' value='5'>
+  <a-entity gltf-model="#smiley" position="0 1 -1" rotation="90 180 360" scale="0.2 0.2 0.2">
+     <a-animation attribute="rotation"
+         dur="5000"
+         fill="forwards"
+         from="0 0 0"
+         to="0 0 360"
+         repeat="indefinite"></a-animation>
+  </a-entity>
+ 
+
+</a-marker>
+
+      <a-entity camera>
+      </a-entity>
+
+</a-scene>
+
+
+
+  </body>
+</html>
+
